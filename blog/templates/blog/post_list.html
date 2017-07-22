@@ -9,8 +9,13 @@
   <h2>Try. Test. Repeat</h2>
   </div>
   <div>
-    <h3>My first post<h3><br />
-    <h3>My second post<h3><br />
+    {% for post in posts %}
+    <div>
+    <p>published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
+    {% endfor %}
   </div>
   <div>
   <h3>Stop by and say hi.<h3>
